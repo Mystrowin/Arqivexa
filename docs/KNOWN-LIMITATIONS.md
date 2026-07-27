@@ -1,4 +1,4 @@
-# CFS 0.3.1 Beta known limitations
+# CFS 0.4.0 Beta known limitations
 
 - Experimental beta: not production-ready and not suitable as the only copy of any important file.
 - Windows-only, with x64 as the supported beta target.
@@ -6,7 +6,7 @@
 - Compatibility Mode is explicit full extraction, not on-demand mounting, and can require time and disk space comparable to the uncompressed archive.
 - Compatibility with every Windows application is not guaranteed. Previews, antivirus, indexing, memory mapping, and application access patterns can trigger hydration.
 - Broker commits are automatic after a quiet period; a failed commit retains recoverable session data and must be resolved before **Close CFS** can report success.
-- Updates append changed data and manifests. Archives can grow because compaction is not implemented.
+- Updates append changed data and manifests, so archives can grow. After closing the mounted workspace, use **Optimize CFS archive** to transactionally remove obsolete archive history; optimization is currently manual rather than automatic.
 - Compression is independent per-file LZMA2, not solid compression. A requested file must be decompressed as its own block before ranges are served.
 - No encryption, password protection, deduplication, version history, cloud synchronization, permissions preservation, or multi-user coordination.
 - Directory deletion is limited to empty folders through supported workflows.
@@ -14,4 +14,4 @@
 - The public GitHub issue tracker is the support channel; reports are public and must be scrubbed of private information.
 - The beta installer is unsigned and Windows SmartScreen may warn before installation.
 
-See [DATA-SAFETY.md](DATA-SAFETY.md) before testing and [BETA-QUICK-START.md](BETA-QUICK-START.md) for the supported Explorer workflow.
+See [DATA-SAFETY.md](DATA-SAFETY.md) before testing and [on-demand-mount.md](on-demand-mount.md) for ProjFS details.

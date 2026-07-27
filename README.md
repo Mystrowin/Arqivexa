@@ -1,10 +1,10 @@
-# CFS 0.3.1 Beta
+# CFS 0.4.0 Beta
 
 CFS is experimental Windows software for creating and opening compressed `.cfs` archives through an Explorer-first workflow.
 
 [Project website](https://mystrowin.github.io/CFS/) · [Download CFS](https://mystrowin.github.io/CFS/#download) · [Report a problem](https://github.com/Mystrowin/CFS/issues)
 
-> Keep a separate backup of every important file. CFS 0.3.1 Beta is not production-ready and must not be the only copy of irreplaceable data.
+> Keep a separate backup of every important file. CFS 0.4.0 Beta is not production-ready and must not be the only copy of irreplaceable data.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ CFS is experimental Windows software for creating and opening compressed `.cfs` 
 - [Installation and uninstall](docs/INSTALL-UNINSTALL.md)
 - [Data-safety guidance](docs/DATA-SAFETY.md)
 - [Known limitations](docs/KNOWN-LIMITATIONS.md)
-- [Current release notes](docs/RELEASE-NOTES-0.3.1-BETA.md)
+- [Current release notes](docs/RELEASE-NOTES-0.4.0-BETA.md)
 - [Bug-report template](docs/BUG-REPORT-TEMPLATE.md)
 - [Security policy](SECURITY.md)
 

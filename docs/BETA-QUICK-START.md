@@ -1,8 +1,8 @@
-# CFS 0.3.1 Beta quick start
+# CFS 0.4.0 Beta quick start
 
 ## Safety warning
 
-CFS 0.3.1 is the current stable beta. Keep an independent backup of important files while evaluating archive workflows.
+CFS 0.4.0 is the current beta. Keep an independent backup of important files while evaluating archive workflows.
 
 ## Supported Windows requirements
 
@@ -14,7 +14,7 @@ If ProjFS is unavailable, CFS explains how to enable **Windows Projected File Sy
 
 ## Install
 
-1. Download `CFS-0.3.1-Beta-Setup.exe` from the public GitHub release.
+1. Download `CFS-0.4.0-Beta-Setup.exe` from the public GitHub release.
 2. Run setup and approve the Windows administrator prompt.
 3. Leave **Windows Projected File System** selected when setup offers to enable it.
 
@@ -47,6 +47,10 @@ The broker commits normal Explorer changes after a bounded quiet period. Right-c
 
 Use **Close CFS**, choose whether to commit or discard pending changes, and wait for cleanup. Reopen the same `.cfs` and verify the intended changes. If cleanup fails, CFS preserves and reports the exact mount path; follow [Data-safety guidance](DATA-SAFETY.md).
 
+## Reclaim archive space
+
+Repeated edits append new archive data and can leave old blocks reclaimable. Close the mounted workspace, then right-click the `.cfs` file and choose **Optimize CFS archive**. CFS copies only live compressed blocks into a same-volume candidate, validates it, and keeps a restorable backup through the replacement boundary. Optimization refuses to run while the archive has an active session.
+
 ## Logs and bug reports
 
 - Logs are under `%LOCALAPPDATA%\CFS\Logs`.
@@ -56,4 +60,4 @@ Use **Close CFS**, choose whether to commit or discard pending changes, and wait
 
 ## Uninstall
 
-Use Windows **Installed apps** to uninstall CFS. The uninstaller preserves `.cfs` archives, logs, and acknowledgement data. See [Installation and uninstall](INSTALL-UNINSTALL.md).
+Use Windows **Installed apps** to uninstall a setup-based installation. The uninstaller preserves `.cfs` archives, logs, and acknowledgement data. Portable users should follow [Installation and uninstall](INSTALL-UNINSTALL.md).

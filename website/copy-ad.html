@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Copy the CFS Advertisement</title>
+<style>
+:root{color-scheme:dark;--bg:#070914;--panel:#11152a;--line:#2b3261;--text:#f7f8ff;--muted:#aab0cd;--purple:#7c3aed;--blue:#2563eb;--green:#22c55e}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at 20% 0,#32126e 0,transparent 38%),radial-gradient(circle at 90% 20%,#123a80 0,transparent 35%),var(--bg);font-family:Inter,Segoe UI,sans-serif;color:var(--text)}main{width:min(900px,100%);background:rgba(17,21,42,.94);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 30px 90px #0008}h1{font-size:clamp(32px,7vw,58px);margin:0 0 10px;letter-spacing:-.04em}p{color:var(--muted);line-height:1.55}.ad{width:100%;min-height:470px;margin-top:22px;padding:20px;border:1px solid var(--line);border-radius:18px;background:#050817;color:#e8ebff;font:14px/1.55 Consolas,monospace;resize:vertical;white-space:pre}.buttons{display:grid;grid-template-columns:1fr auto;gap:12px;margin-top:16px}button,a{min-height:54px;border-radius:14px;border:0;padding:0 20px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;text-decoration:none;cursor:pointer}button{color:white;background:linear-gradient(135deg,var(--purple),var(--blue))}button.done{background:linear-gradient(135deg,#15803d,var(--green))}a{color:#dbeafe;background:#1a2040;border:1px solid var(--line)}#status{min-height:22px;color:#c4b5fd;font-weight:700}@media(max-width:650px){main{padding:20px}.buttons{grid-template-columns:1fr}.ad{font-size:12px;min-height:520px}}
+</style>
+</head>
+<body>
+<main>
+<h1>Copy the CFS advertisement</h1>
+<p>Press the button once. The full advertisement, including its spacing, symbols, and links, will be copied to your clipboard.</p>
+<div id="status">Ready to copy.</div>
+<textarea class="ad" id="ad" readonly spellcheck="false"> ██████╗███████╗███████╗
+██╔════╝██╔════╝██╔════╝
+██║     █████╗  ███████╗
+██║     ██╔══╝  ╚════██║
+╚██████╗██║     ███████║
+ ╚═════╝╚═╝     ╚══════╝
+
+CFS — COMPRESSED FILE SYSTEM
+
+Compressed archives that work more like normal folders in Windows File Explorer.
+
+📁 Open .cfs archives through File Explorer
+✏️ Create, edit, rename, and move files and folders
+🗑️ Delete files and folders
+💾 Close and reopen archives with changes preserved
+
+CFS is experimental beta software. Keep backups of important files while testing.
+
+🌐 WEBSITE + DOWNLOAD
+https://mystrowin.github.io/CFS/
+
+💬 JOIN THE COMMUNITY
+https://discord.gg/jBd59EYAXp
+
+🐛 REPORT PROBLEMS
+https://github.com/Mystrowin/CFS/issues</textarea>
+<div class="buttons"><button id="copy">📋 Copy Advertisement</button><a href="https://mystrowin.github.io/CFS/">Open CFS Website</a></div>
+</main>
+<script>
+const ad=document.getElementById('ad'),btn=document.getElementById('copy'),status=document.getElementById('status');
+btn.onclick=async()=>{try{await navigator.clipboard.writeText(ad.value);status.textContent='Copied to clipboard.';btn.textContent='✓ Advertisement Copied';btn.classList.add('done')}catch(e){ad.focus();ad.select();ad.setSelectionRange(0,ad.value.length);let ok=false;try{ok=document.execCommand('copy')}catch(_){}status.textContent=ok?'Copied to clipboard.':'Selected—press Ctrl+C.';btn.textContent=ok?'✓ Advertisement Copied':'Press Ctrl+C';if(ok)btn.classList.add('done')}setTimeout(()=>{status.textContent='Ready to copy.';btn.textContent='📋 Copy Advertisement';btn.classList.remove('done')},3000)};
+</script>
+</body>
+</html>

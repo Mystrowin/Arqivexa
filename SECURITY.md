@@ -1,9 +1,23 @@
 # CFS security policy
 
-Report ordinary reproducible bugs through the [public issue tracker](https://github.com/Mystrowin/CFS/issues).
+Report ordinary reproducible bugs through the
+[public issue tracker](https://github.com/Mystrowin/CFS/issues).
 
-Do not publish credentials, private archives, file contents, unredacted personal paths, signing material, or an exploit that would put users at immediate risk. For a sensitive report, request a private contact channel from the project owner without including the sensitive details in the public request.
+Do not publish credentials, private archives, file contents, unredacted
+personal paths, signing material, or an exploit that would put users at
+immediate risk. For a sensitive report, request a private contact channel from
+the project owner without including sensitive details in the public request.
 
-Only download CFS from the project website or the `Mystrowin/CFS` GitHub Releases page. Verify the published SHA-256 checksum before running an installer. CFS beta installers may be unsigned and can trigger Microsoft SmartScreen.
+Only download CFS from the project website or the `Mystrowin/CFS` GitHub
+Releases page. CFS 0.5.0 Stable publishes the installer, SHA-256 checksums,
+public leaf certificate, signature report, SBOM, and update manifest together.
+Verify the checksum and signature report before running setup.
 
-The public repository is an allowlisted documentation and release surface. Implementation source is maintained privately.
+The installer and CFS-owned executable payloads are Authenticode-signed and
+RFC 3161 timestamped with the CFS self-signed publisher certificate. Windows
+can still show Unknown Publisher or Microsoft SmartScreen before that exact
+leaf certificate is explicitly trusted. CFS never installs a general root
+certificate authority.
+
+The public repository is an allowlisted documentation and release surface.
+Implementation source is maintained privately.

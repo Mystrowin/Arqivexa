@@ -1,13 +1,15 @@
 {
-  "schemaVersion": 1,
-  "version": "0.4.0",
-  "releaseLabel": "Beta",
-  "channel": "beta",
-  "architecture": "x64",
-  "publishedUtc": "2026-07-27T18:29:27Z",
-  "minimumWindowsBuild": 22000,
-  "setupUrl": "https://github.com/Mystrowin/CFS/releases/download/v0.4.0-beta/CFS-0.4.0-Beta-Setup.exe",
-  "sha256": "32059e432b801c67c24080c49a6e87c4dd2c0fd8c0bb7722c7889fd24f59c2cb",
-  "releaseNotesUrl": "https://github.com/Mystrowin/CFS/releases/tag/v0.4.0-beta",
-  "mandatory": false
+    "schemaVersion":  1,
+    "version":  "0.5.0",
+    "releaseLabel":  "Stable",
+    "channel":  "stable",
+    "architecture":  "x64",
+    "publishedUtc":  "2026-07-29T19:34:52Z",
+    "minimumWindowsBuild":  22000,
+    "setupUrl":  "https://github.com/Mystrowin/CFS/releases/download/v0.5.0/CFS-0.5.0-Stable-Setup.exe",
+    "sha256":  "b89a650b96e3dfe981a28b2ff13888cbfef30ec8873f2af77955a1ead98fb46a",
+    "signerThumbprint":  "3128136912D1492C0727365B62D833C54C9B0CF4",
+    "signerPublicKeySha256":  "ff0906e14f8c546bf139217ed024eef448bd2ac35bc77c9fcb1ebeb7a5ae95ba",
+    "releaseNotesUrl":  "https://github.com/Mystrowin/CFS/releases/tag/v0.5.0",
+    "mandatory":  false
 }

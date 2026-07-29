@@ -1,31 +1,43 @@
-# CFS 0.4.0 Beta
+# CFS 0.5.0 Stable
 
-CFS is experimental Windows software for creating and opening compressed `.cfs` archives through an Explorer-first workflow.
+CFS creates, opens, edits, and extracts compressed `.cfs` archives through an
+Explorer-first Windows workflow.
 
-[Project website](https://mystrowin.github.io/CFS/) · [Download CFS](https://mystrowin.github.io/CFS/#download) · [Report a problem](https://github.com/Mystrowin/CFS/issues)
+[Project website](https://mystrowin.github.io/CFS/) ·
+[Download CFS](https://mystrowin.github.io/CFS/#download) ·
+[Report a problem](https://github.com/Mystrowin/CFS/issues)
 
-> Keep a separate backup of every important file. CFS 0.4.0 Beta is not production-ready and must not be the only copy of irreplaceable data.
+> Keep an independent backup of important or irreplaceable files. CFS's
+> retained previous version protects one transaction boundary; it is not a
+> substitute for a separate backup.
 
 ## Requirements
 
-- Windows 11 x64 is the currently prioritized platform.
-- Windows Projected File System (`Client-ProjFS`) must be enabled for Explorer mounting.
-- Writable archives must be stored on a local NTFS volume.
+- Windows 11 x64.
+- Windows Projected File System (`Client-ProjFS`) for Explorer mounting.
+- Local NTFS storage for writable archives.
 
 ## Start here
 
-- [Beta quick start](docs/BETA-QUICK-START.md)
 - [Installation and uninstall](docs/INSTALL-UNINSTALL.md)
 - [Data-safety guidance](docs/DATA-SAFETY.md)
+- [Privacy and diagnostics policy](docs/PRIVACY-DIAGNOSTICS.md)
 - [Known limitations](docs/KNOWN-LIMITATIONS.md)
-- [Current release notes](docs/RELEASE-NOTES-0.4.0-BETA.md)
+- [0.5.0 Stable release notes](docs/RELEASE-NOTES-0.5.0-STABLE.md)
+- [0.5.0 Stable acceptance report](docs/ACCEPTANCE-REPORT-0.5.0-STABLE.md)
 - [Bug-report template](docs/BUG-REPORT-TEMPLATE.md)
 - [Security policy](SECURITY.md)
 
 ## Repository contents
 
-This public repository contains the CFS website, user documentation, release metadata, and issue tracking. Official compiled installers are distributed through [GitHub Releases](https://github.com/Mystrowin/CFS/releases).
+This public repository contains the CFS website, user documentation, release
+metadata, and issue tracking. Official installers and verification artifacts
+are distributed through
+[GitHub Releases](https://github.com/Mystrowin/CFS/releases).
 
-Implementation source, tests, build tooling, installer definitions, and internal engineering documents are maintained in a private source repository. The public repository history was intentionally reduced to approved public material; this does not revoke copies that may have been downloaded before that change.
+Implementation source, tests, build tooling, installer definitions, and
+internal engineering documents are maintained privately. The public
+repository history was intentionally reduced to approved public material; this
+does not revoke copies that may have been downloaded before that change.
 
 Copyright © 2026 Neeraj Pragnya Krishna Vasagiri. All rights reserved.

@@ -1,8 +1,8 @@
-# CFS 0.4.0 Beta known limitations
+# CFS 0.5.0 Stable known limitations
 
-- Experimental beta: not production-ready and not suitable as the only copy of any important file.
-- Windows-only, with x64 as the supported beta target.
-- Default Explorer mounting requires Windows 10 version 1809 or newer, or Windows 11, and enabled `Client-ProjFS`.
+- CFS is not a backup system and must not be the only copy of any important file.
+- Windows 11 x64 is the supported target.
+- Default Explorer mounting requires enabled `Client-ProjFS` and writable archives on local NTFS storage.
 - Compatibility Mode is explicit full extraction, not on-demand mounting, and can require time and disk space comparable to the uncompressed archive.
 - Compatibility with every Windows application is not guaranteed. Previews, antivirus, indexing, memory mapping, and application access patterns can trigger hydration.
 - Broker commits are automatic after a quiet period; a failed commit retains recoverable session data and must be resolved before **Close CFS** can report success.
@@ -12,6 +12,7 @@
 - Directory deletion is limited to empty folders through supported workflows.
 - A failed cleanup can leave a preserved temporary mount that the user must close and retry safely.
 - The public GitHub issue tracker is the support channel; reports are public and must be scrubbed of private information.
-- The beta installer is unsigned and Windows SmartScreen may warn before installation.
+- The installer uses a self-signed publisher certificate and Windows SmartScreen may warn before the exact leaf certificate is trusted.
 
-See [DATA-SAFETY.md](DATA-SAFETY.md) before testing and [on-demand-mount.md](on-demand-mount.md) for ProjFS details.
+See [DATA-SAFETY.md](DATA-SAFETY.md) before storing important files and the
+[0.5.0 Stable release notes](RELEASE-NOTES-0.5.0-STABLE.md) for the supported scope.

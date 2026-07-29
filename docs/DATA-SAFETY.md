@@ -1,8 +1,8 @@
-# CFS 0.4.0 Beta data-safety guidance
+# CFS 0.5.0 Stable data-safety guidance
 
 ## Backups and non-critical files
 
-Keep a separate, independently accessible backup of every file placed in a `.cfs`. Use beta archives only for non-critical test files. CFS 0.4.0 Beta is not production-ready and must not be the sole storage location.
+Keep a separate, independently accessible backup of every file placed in a `.cfs`. CFS 0.5.0 Stable must not be the sole storage location for important or irreplaceable data.
 
 ## Validate an archive
 
@@ -17,11 +17,11 @@ Use **Validate** after creating an archive, after significant edits, and before 
 5. Retry the broker commit or use **Close CFS** once the likely cause is removed.
 6. Validate and reopen the archive before trusting the retry.
 
-CFS is designed to leave the previous readable archive current when saving fails, but beta users must still retain an independent backup.
+CFS is designed to leave the previous readable archive current when saving fails, but users must still retain an independent backup.
 
 ## Safe archive optimization
 
-Run **Optimize CFS archive** only after closing its mounted workspace. Optimization creates and validates a compact candidate before replacing the archive, preserves a same-volume backup during replacement, and restores that backup if post-replacement validation fails. It never modifies an archive that CFS detects as externally changed or currently mounted. Keep an independent backup because this remains beta software.
+Run **Optimize CFS archive** only after closing its mounted workspace. Optimization creates and validates a compact candidate before replacing the archive, preserves a same-volume backup during replacement, and restores that backup if post-replacement validation fails. It never modifies an archive that CFS detects as externally changed or currently mounted. Keep an independent backup because compression software is not a substitute for disaster recovery.
 
 ## Preserved mount folders after cleanup failure
 

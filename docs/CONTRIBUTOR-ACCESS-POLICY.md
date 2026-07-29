@@ -1,6 +1,6 @@
-# CFS 0.4.0 Beta contributor access policy
+# CFS contributor access policy
 
-Beta users may receive permanent access to the future paid version when they make a meaningful contribution to CFS.
+CFS users may receive permanent access to a future paid version when they make a meaningful contribution to CFS.
 
 Qualifying contributions may include:
 
@@ -8,7 +8,7 @@ Qualifying contributions may include:
 - providing clear reproduction steps and useful logs;
 - testing and confirming fixes;
 - documenting application compatibility;
-- helping other beta users resolve verified issues;
+- helping other CFS users resolve verified issues;
 - improving documentation, tests, translations, accessibility, or accepted code.
 
 Duplicate, false, abusive, automated, or low-effort reports do not qualify.
@@ -21,6 +21,6 @@ Permanent access is not automatic for every report. It is awarded based on the u
 2. The project owner reviews originality, reproducibility, usefulness, impact, and conduct.
 3. The owner may request clarification, logs, fix confirmation, or compatibility retesting.
 4. Only a written confirmation from the project owner grants permanent access.
-5. The owner maintains the award record manually for this beta.
+5. The owner maintains the award record manually.
 
-CFS 0.4.0 Beta does not include a licensing backend for this program. Submission, discussion, or acceptance of a report does not by itself grant access.
+CFS 0.5.0 Stable does not include a licensing backend for this program. Submission, discussion, or acceptance of a report does not by itself grant access.

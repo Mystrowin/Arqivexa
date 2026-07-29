@@ -1,10 +1,10 @@
-# CFS 0.4.0 Beta installation and uninstall
+# CFS 0.5.0 Stable installation and uninstall
 
 ## Recommended machine-wide setup
 
-Run `CFS-0.4.0-Beta-Setup.exe`, approve the Windows administrator prompt, and follow the setup wizard. Setup installs CFS under `Program Files\CFS`, registers the command-client and broker-based Explorer workflow, adds archive-creation commands, and checks the `Client-ProjFS` Windows feature.
+Run `CFS-0.5.0-Stable-Setup.exe`, approve the Windows administrator prompt when choosing an all-user install, and follow the setup wizard. Setup can install CFS for the current user or for all users, registers the command-client and broker-based Explorer workflow, adds archive-creation commands, and checks the `Client-ProjFS` Windows feature.
 
-This beta installer is unsigned, so Microsoft SmartScreen may display a warning. Verify the published SHA-256 checksum before continuing.
+The Stable installer is signed with the exact CFS self-signed publisher certificate, but Microsoft SmartScreen can still display a warning before that certificate is explicitly trusted. Verify the published SHA-256 checksum before continuing.
 
 Use Windows **Installed apps** to remove CFS. The uninstaller removes the file association only when it still points to this CFS installation and never deletes `.cfs` archives or `%LOCALAPPDATA%\CFS` user data.
 
@@ -13,14 +13,14 @@ Use Windows **Installed apps** to remove CFS. The uninstaller removes the file a
 If a complete portable package is provided, extract it to a writable local folder. Paths containing spaces are supported when commands remain quoted:
 
 ```powershell
-& "C:\Users\Public\CFS 0.4.0 Beta\Cfs.CommandClient.exe" open "C:\path\to\archive.cfs"
+& "$env:ProgramFiles\CFS\Cfs.CommandClient.exe" open "C:\path\to\archive.cfs"
 ```
 
 Do not run only the executable from inside the ZIP and do not separate it from packaged native and managed dependencies.
 
 ## ProjFS prerequisite
 
-The default **Open in Explorer** action requires Windows 10 version 1809 or newer, or Windows 11, with `Client-ProjFS` enabled. Open **Turn Windows features on or off**, enable **Windows Projected File System**, and restart if Windows requests it. CFS reports unavailability and never silently activates full extraction.
+The default **Open in Explorer** action requires Windows 11 x64 with `Client-ProjFS` enabled. Setup can request approval to enable **Windows Projected File System** and reports when Windows requires a restart. CFS reports unavailability and never silently activates full extraction.
 
 ## Register `.cfs` double-click
 
@@ -34,7 +34,7 @@ Registration writes under `HKCU\Software\Classes`; it does not require a machine
 
 ## Reverse the file association
 
-Close CFS, then use the packaged script to remove only the current-user keys created by this beta:
+Close CFS, then use the packaged script to remove only the current-user keys created by CFS 0.5.0 Stable:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File ".\Register-CfsFileAssociation.ps1" -Unregister
@@ -55,6 +55,6 @@ If another application owned `.cfs` before testing, restore that application thr
 2. Confirm no CFS window or preserved mount is still in use.
 3. Reverse the file association as above.
 4. Delete the extracted CFS folder or ZIP.
-5. Optionally remove `%LOCALAPPDATA%\CFS\Logs` and `%LOCALAPPDATA%\CFS\beta-warning-acknowledgement.txt` after retaining any logs needed for reports.
+5. Optionally remove `%LOCALAPPDATA%\CFS\Logs` and CFS diagnostic settings after retaining any logs needed for reports.
 
 Uninstalling the application does not delete `.cfs` archives or user-created backups.

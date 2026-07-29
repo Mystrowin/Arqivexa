@@ -1,4 +1,4 @@
-CFS public third-party notices
+CFS 0.5.0 Stable third-party notices
 
 Microsoft .NET
 -------------

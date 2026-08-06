@@ -71,6 +71,10 @@ for (const node of document.querySelectorAll("body *")) {
   }
 }
 
+for (const link of document.querySelectorAll('a[href="what-is-cfs.html"]')) {
+  link.href = "what-is-arqivexa.html";
+}
+
 for (const link of document.querySelectorAll('a[href="https://mystrowin.github.io/CFS/"], a[href="https://mystrowin.github.io/CFS/#download"]')) {
   link.href = link.href.endsWith("#download")
     ? "https://arqivexa.mystrowin.com/#download"

@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Publish update manifest with website
+        run: cp update.json website/update.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact

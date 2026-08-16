@@ -1,4 +1,4 @@
-CFS 0.5.0 Stable third-party notices
+Arqivexa 0.5.0 Stable third-party notices
 
 Microsoft .NET
 -------------
@@ -7,7 +7,7 @@ The official SDK LICENSE.txt and ThirdPartyNotices.txt used for this build are i
 
 7-Zip LZMA SDK 26.02
 --------------------
-CFS includes cfs-lzma.dll built from the 7-Zip LZMA SDK and the reduced 7zr.exe tool for legacy CFS block compatibility.
+Arqivexa 0.5.0 includes `cfs-lzma.dll` built from the 7-Zip LZMA SDK and the reduced `7zr.exe` tool for legacy CFS block compatibility. The CFS names are retained technical/build identifiers from the signed 0.5.0 release.
 The LZMA SDK states that the LZMA SDK is placed in the public domain. Its supplied notice is included as licenses/LZMA-SDK-NOTICE.txt.
 
 No notice in this file changes the terms of the included upstream license and notice files.

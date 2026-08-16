@@ -1,12 +1,12 @@
-# CFS 0.5.0 Stable bug-report template
+# Arqivexa 0.5.0 Stable bug-report template
 
-Bug-report destination: `https://github.com/Mystrowin/CFS/issues`
+Bug-report destination: `https://github.com/Mystrowin/Arqivexa/issues`
 
 Do not send an archive or private file contents unless you have reviewed them and received a trusted request from the project owner.
 
 ## Environment
 
-- **CFS version and build identifier:**
+- **Arqivexa version and build identifier:**
 - **Windows version and edition:**
 - **Installation/extraction location (redact username if needed):**
 - **ProjFS or explicitly selected Compatibility Mode:**

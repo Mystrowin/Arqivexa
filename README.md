@@ -4,9 +4,9 @@
 
 [Project website](https://arqivexa.mystrowin.com/) ·
 [Download the current release](https://arqivexa.mystrowin.com/#download) ·
-[Report a problem](https://github.com/Mystrowin/CFS/issues)
+[Report a problem](https://github.com/Mystrowin/Arqivexa/issues)
 
-> **Rebrand notice:** CFS is now named **Arqivexa**. The current 0.5.0 installer, release files, repository path, and `.cfs` archive extension still use the previous CFS name during the transition.
+> **Rebrand notice:** CFS is now named **Arqivexa**. The current 0.5.0 installer filename, some signed build artifacts, and the `.cfs` archive extension retain the previous CFS name for compatibility and release integrity.
 
 > Keep an independent backup of important or irreplaceable files. Arqivexa's retained previous version protects one transaction boundary; it is not a substitute for a separate backup.
 
@@ -29,7 +29,7 @@
 
 ## Repository contents
 
-This public repository contains the Arqivexa website, user documentation, release metadata, and issue tracking. Official installers and verification artifacts remain distributed through [GitHub Releases](https://github.com/Mystrowin/CFS/releases).
+This public repository contains the Arqivexa website, user documentation, release metadata, and issue tracking. Official installers and verification artifacts remain distributed through [GitHub Releases](https://github.com/Mystrowin/Arqivexa/releases).
 
 Implementation source, tests, build tooling, installer definitions, and internal engineering documents are maintained privately. The public repository history was intentionally reduced to approved public material; this does not revoke copies that may have been downloaded before that change.
 

@@ -5,4 +5,5 @@ to copy, modify, distribute, sublicense, sell, or use this software or its sourc
 code except under a separate written agreement from the copyright holder.
 
 Third-party components remain subject to their respective license terms as listed
-in the notices and license files distributed with the relevant CFS release.
+in the notices and license files distributed with the relevant Arqivexa release.
+Historical and technical artifact names may still use the former CFS name.

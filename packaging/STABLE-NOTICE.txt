@@ -1,16 +1,11 @@
-CFS 0.5.0 Stable
+Arqivexa 0.5.0 Stable
 
 Copyright © 2026 Neeraj Pragnya Krishna Vasagiri. All rights reserved.
 
-This release is intended for Windows 11 x64 on local NTFS storage. CFS archives
-are not encrypted. Protect archives using Windows access controls and separate
-backup practices where confidentiality is required.
+Arqivexa is the current product name for the 0.5.0 build originally published as CFS 0.5.0 Stable. Signed 0.5.0 binaries, installer filenames, certificate identity, and compatibility identifiers are unchanged by the rebrand.
 
-The installer is signed with the CFS self-signed publisher certificate. Windows
-may still show an Unknown Publisher or SmartScreen warning until the user has
-explicitly chosen to trust that exact certificate. CFS never installs a general
-root certificate authority.
+This release is intended for Windows 11 x64 on local NTFS storage. `.cfs` archives are not encrypted. Protect archives using Windows access controls and separate backup practices where confidentiality is required.
 
-Only publish this notice with an installer that has passed the complete installed
-artifact acceptance checks. Do not treat a development or partial package as a
-Stable release.
+The installer is signed with the existing CFS self-signed publisher certificate. Windows may still show an Unknown Publisher or SmartScreen warning until the user has explicitly chosen to trust that exact certificate. Arqivexa never installs a general root certificate authority.
+
+Only publish this notice with an installer that has passed the complete installed artifact acceptance checks. Do not treat a development or partial package as a Stable release.

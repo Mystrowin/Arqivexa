@@ -1,7 +1,7 @@
-# Contributing to CFS
+# Contributing to Arqivexa
 
-CFS uses the public repository for issue reports, user documentation, release
-information, and website content.
+Arqivexa uses the public repository for issue reports, user documentation,
+release information, and website content.
 
 Before reporting a bug:
 

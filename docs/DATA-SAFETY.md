@@ -1,8 +1,8 @@
-# CFS 0.5.0 Stable data-safety guidance
+# Arqivexa 0.5.0 Stable data-safety guidance
 
 ## Backups and non-critical files
 
-Keep a separate, independently accessible backup of every file placed in a `.cfs`. CFS 0.5.0 Stable must not be the sole storage location for important or irreplaceable data.
+Keep a separate, independently accessible backup of every file placed in a `.cfs`. Arqivexa 0.5.0 Stable must not be the sole storage location for important or irreplaceable data.
 
 ## Validate an archive
 
@@ -17,15 +17,15 @@ Use **Validate** after creating an archive, after significant edits, and before 
 5. Retry the broker commit or use **Close CFS** once the likely cause is removed.
 6. Validate and reopen the archive before trusting the retry.
 
-CFS is designed to leave the previous readable archive current when saving fails, but users must still retain an independent backup.
+Arqivexa is designed to leave the previous readable archive current when saving fails, but users must still retain an independent backup.
 
 ## Safe archive optimization
 
-Run **Optimize CFS archive** only after closing its mounted workspace. Optimization creates and validates a compact candidate before replacing the archive, preserves a same-volume backup during replacement, and restores that backup if post-replacement validation fails. It never modifies an archive that CFS detects as externally changed or currently mounted. Keep an independent backup because compression software is not a substitute for disaster recovery.
+Run **Optimize CFS archive** only after closing its mounted workspace. Optimization creates and validates a compact candidate before replacing the archive, preserves a same-volume backup during replacement, and restores that backup if post-replacement validation fails. It never modifies an archive that Arqivexa detects as externally changed or currently mounted. Keep an independent backup because compression software is not a substitute for disaster recovery.
 
 ## Preserved mount folders after cleanup failure
 
-If unmount cleanup fails, the UI reports the exact preserved path, normally below `%TEMP%\CFS\mounts`. Do not delete an unrelated folder. Close applications using that exact path, retry **Unmount**, and retain the folder until saved changes have been verified in the reopened archive. Include the exact path in a private bug report when useful; remove personal path portions from public screenshots.
+If unmount cleanup fails, the UI reports the exact preserved path, normally below `%TEMP%\CFS\mounts`. The CFS directory name is retained by the 0.5.0 release for compatibility. Do not delete an unrelated folder. Close applications using that exact path, retry **Unmount**, and retain the folder until saved changes have been verified in the reopened archive. Include the exact path in a private bug report when useful; remove personal path portions from public screenshots.
 
 ## Privacy-safe log sharing
 

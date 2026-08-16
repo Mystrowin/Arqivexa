@@ -1,0 +1,85 @@
+name: One-time site polish
+
+on:
+  push:
+    paths:
+      - 'scripts/polish_site.py'
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply site-wide visual and navigation polish
+        run: python scripts/polish_site.py
+
+      - name: Validate generated site
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+
+          root = Path('website')
+          html_files = sorted(root.glob('*.html'))
+          assert html_files, 'No HTML files found'
+
+          class Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.hrefs = []
+                  self.ids = []
+              def handle_starttag(self, tag, attrs):
+                  data = dict(attrs)
+                  if tag == 'a' and data.get('href'):
+                      self.hrefs.append(data['href'])
+                  if data.get('id'):
+                      self.ids.append(data['id'])
+
+          failures = []
+          for page in html_files:
+              text = page.read_text(encoding='utf-8')
+              parser = Parser()
+              parser.feed(text)
+              dup_ids = sorted({x for x in parser.ids if parser.ids.count(x) > 1})
+              if dup_ids:
+                  failures.append(f'{page}: duplicate ids {dup_ids}')
+              if page.name not in {'404.html', 'what-is-cfs.html'}:
+                  for expected in ['How it works', 'Guides', 'Install', 'Security', 'FAQ', 'Download']:
+                      if expected not in text:
+                          failures.append(f'{page}: missing nav label {expected}')
+              for href in parser.hrefs:
+                  if href.startswith(('http://', 'https://', 'mailto:', '#', '/')):
+                      continue
+                  target = href.split('#', 1)[0].split('?', 1)[0]
+                  if not target:
+                      continue
+                  if not (root / target).exists():
+                      failures.append(f'{page}: missing internal target {target}')
+
+          css = (root / 'styles.css').read_text(encoding='utf-8')
+          assert 'ARQIVEXA SITE-WIDE POLISH' in css, 'Polish CSS block missing'
+          if failures:
+              raise SystemExit('\n'.join(failures))
+          print(f'Validated {len(html_files)} HTML files and internal links.')
+          PY
+
+      - name: Commit polished site
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add website
+          git commit -m "Polish Arqivexa site-wide layout and navigation"
+          git push origin HEAD:main

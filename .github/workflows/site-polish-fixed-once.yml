@@ -1,0 +1,101 @@
+name: One-time site polish fixed
+
+on:
+  push:
+    paths:
+      - '.github/workflows/site-polish-fixed-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply site-wide visual and navigation polish
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import scripts.polish_site as p
+
+          p.polish_css()
+          for page in sorted(p.ROOT.glob('*.html')):
+              text = page.read_text(encoding='utf-8', errors='replace')
+              # Webmaster verification files can use .html without being pages.
+              if '<html' not in text.lower() and '<!doctype' not in text.lower():
+                  continue
+              p.polish_html(page)
+          print('Applied site-wide polish to all real HTML pages.')
+          PY
+
+      - name: Validate generated site
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+
+          root = Path('website')
+          html_files = []
+          for path in sorted(root.glob('*.html')):
+              text = path.read_text(encoding='utf-8', errors='replace')
+              if '<html' in text.lower() or '<!doctype' in text.lower():
+                  html_files.append(path)
+
+          class Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.hrefs = []
+                  self.ids = []
+              def handle_starttag(self, tag, attrs):
+                  data = dict(attrs)
+                  if tag == 'a' and data.get('href'):
+                      self.hrefs.append(data['href'])
+                  if data.get('id'):
+                      self.ids.append(data['id'])
+
+          failures = []
+          for page in html_files:
+              text = page.read_text(encoding='utf-8')
+              parser = Parser(); parser.feed(text)
+              seen = set(); duplicates = set()
+              for item in parser.ids:
+                  if item in seen: duplicates.add(item)
+                  seen.add(item)
+              if duplicates:
+                  failures.append(f'{page}: duplicate ids {sorted(duplicates)}')
+              if page.name not in {'404.html', 'what-is-cfs.html'}:
+                  for expected in ['How it works', 'Guides', 'Install', 'Security', 'FAQ', 'Download']:
+                      if expected not in text:
+                          failures.append(f'{page}: missing nav label {expected}')
+              for href in parser.hrefs:
+                  if href.startswith(('http://', 'https://', 'mailto:', '#', '/')):
+                      continue
+                  target = href.split('#', 1)[0].split('?', 1)[0]
+                  if target and not (root / target).exists():
+                      failures.append(f'{page}: missing internal target {target}')
+
+          css = (root / 'styles.css').read_text(encoding='utf-8')
+          if 'ARQIVEXA SITE-WIDE POLISH' not in css:
+              failures.append('styles.css: polish block missing')
+          if failures:
+              raise SystemExit('\n'.join(failures))
+          print(f'Validated {len(html_files)} real HTML pages, navigation, IDs, CSS marker, and internal links.')
+          PY
+
+      - name: Commit polished site
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add website
+          git commit -m "Polish Arqivexa site-wide layout and navigation"
+          git push origin HEAD:main

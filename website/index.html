@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arqivexa 0.5.0 Stable — Editable Compressed Archives for Windows</title>
-    <meta name="description" content="Arqivexa creates, opens, edits, and optimizes compressed archives through File Explorer on Windows 11.">
+    <meta name="description" content="Arqivexa creates, opens, edits, and optimizes compressed .cfs archives through File Explorer on Windows 11.">
     <meta name="application-name" content="Arqivexa">
     <meta name="author" content="Neeraj Pragnya Krishna Vasagiri">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -26,16 +26,39 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Arqivexa",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Windows 11 (x64)",
-        "softwareVersion": "0.5.0 Stable",
-        "url": "https://arqivexa.mystrowin.com/",
-        "downloadUrl": "https://github.com/Mystrowin/Arqivexa/releases/download/v0.5.0/CFS-0.5.0-Stable-Setup.exe",
-        "releaseNotes": "https://github.com/Mystrowin/Arqivexa/releases/tag/v0.5.0",
-        "softwareRequirements": "Windows 11 x64 with local NTFS storage for writable archives",
-        "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD"}
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://arqivexa.mystrowin.com/#website",
+            "url": "https://arqivexa.mystrowin.com/",
+            "name": "Arqivexa",
+            "alternateName": ["Arqivexa by Mystrowin", "Arqivexa Editable Archive Workspace"],
+            "publisher": {"@id": "https://arqivexa.mystrowin.com/#mystrowin"}
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://arqivexa.mystrowin.com/#mystrowin",
+            "name": "Mystrowin",
+            "url": "https://arqivexa.mystrowin.com/",
+            "logo": "https://arqivexa.mystrowin.com/og.png",
+            "sameAs": ["https://github.com/Mystrowin"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://arqivexa.mystrowin.com/#software",
+            "name": "Arqivexa",
+            "alternateName": "Arqivexa 0.5.0 Stable",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 11 (x64)",
+            "softwareVersion": "0.5.0 Stable",
+            "url": "https://arqivexa.mystrowin.com/",
+            "downloadUrl": "https://github.com/Mystrowin/Arqivexa/releases/download/v0.5.0/CFS-0.5.0-Stable-Setup.exe",
+            "releaseNotes": "https://github.com/Mystrowin/Arqivexa/releases/tag/v0.5.0",
+            "softwareRequirements": "Windows 11 x64 with local NTFS storage for writable archives",
+            "publisher": {"@id": "https://arqivexa.mystrowin.com/#mystrowin"},
+            "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD"}
+          }
+        ]
       }
     </script>
     <link rel="stylesheet" href="styles.css">
@@ -51,11 +74,11 @@
           <span class="brand-copy"><strong>Arqivexa</strong><small>Editable Archive Workspace</small></span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="what-is-arqivexa.html">What is Arqivexa?</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#requirements">Requirements</a>
-          <a href="#security">Verification</a>
-          <a class="nav-download" href="#download">Download</a>
+          <a href="how-arqivexa-works.html">How it works</a>
+          <a href="install.html">Install</a>
+          <a href="security.html">Security</a>
+          <a href="faq.html">FAQ</a>
+          <a class="nav-download" href="download.html">Download</a>
         </nav>
       </header>
 
@@ -69,7 +92,7 @@
             <h1>Arqivexa: Editable compressed archives<span> for Windows.</span></h1>
             <p class="hero-intro">Arqivexa 0.5.0 Stable creates, opens, edits, and optimizes <code>.cfs</code> archives through an Explorer-first workflow on Windows 11.</p>
             <div class="hero-actions">
-              <a class="primary-button" href="https://github.com/Mystrowin/Arqivexa/releases/download/v0.5.0/CFS-0.5.0-Stable-Setup.exe"><span>Download 0.5.0 Stable</span><span aria-hidden="true">↓</span></a>
+              <a class="primary-button" href="download.html"><span>Download 0.5.0 Stable</span><span aria-hidden="true">↓</span></a>
               <a class="text-link" href="what-is-arqivexa.html">Read what Arqivexa is <span aria-hidden="true">→</span></a>
             </div>
             <div class="hero-facts" role="list" aria-label="Release summary"><span role="listitem">48.4 MiB</span><span role="listitem">Windows 11 x64</span><span role="listitem">Explorer-first</span></div>
@@ -117,24 +140,18 @@
             <article class="step-card"><span class="step-number">02</span><div class="step-glyph mount-glyph" aria-hidden="true"></div><h3>Mount in Explorer</h3><p>Browse projected files through Windows File Explorer without extracting the entire archive first.</p></article>
             <article class="step-card"><span class="step-number">03</span><div class="step-glyph save-glyph" aria-hidden="true"></div><h3>Save and unmount</h3><p>Save supported changes back into the archive, validate it, and close the mounted folder cleanly.</p></article>
           </div>
+          <p><a class="text-link" href="how-arqivexa-works.html">Read the full workflow explanation <span aria-hidden="true">→</span></a></p>
         </section>
 
-        <section class="section download-section" id="release-details">
-          <div class="section-heading"><span class="section-index">02</span><div><p class="kicker">Stable release</p><h2>One supported Arqivexa installer.</h2></div></div>
-          <div class="release-grid">
-            <article class="release-card current-release">
-              <div class="download-card-topline"><span class="release-badge stable">Stable</span><span>0.5.0 Stable</span></div>
-              <h3>Arqivexa 0.5.0 Stable</h3><p>The supported Explorer-first release for creating, opening, editing, saving, and optimizing compressed archives.</p>
-              <a class="primary-button wide" href="https://github.com/Mystrowin/Arqivexa/releases/download/v0.5.0/CFS-0.5.0-Stable-Setup.exe"><span>Download 0.5.0 Stable</span><span aria-hidden="true">↓</span></a>
-              <dl class="file-metadata"><div><dt>Status</dt><dd>Stable</dd></div><div><dt>Architecture</dt><dd>x64</dd></div><div><dt>Size</dt><dd>48.4 MiB</dd></div></dl>
-              <div class="release-links" aria-label="Arqivexa release resources"><a href="https://github.com/Mystrowin/Arqivexa/releases/download/v0.5.0/SHA256SUMS.txt">Checksums</a><a href="https://github.com/Mystrowin/Arqivexa/releases/tag/v0.5.0">Release notes ↗</a></div>
-              <div class="unsigned-note"><strong>Existing installer filename retained</strong><p>The download is still named <code>CFS-0.5.0-Stable-Setup.exe</code>. It is also Authenticode-signed with a self-signed certificate, so Windows may show Unknown Publisher or SmartScreen.</p></div>
-            </article>
-            <article class="release-card">
-              <div class="download-card-topline"><span class="release-badge new">Withdrawn</span><span>0.1.0–0.4.0</span></div>
-              <h3>Older releases</h3><p>All versions before 0.5 were withdrawn because of known bugs. They are unsupported and no longer offered for download.</p>
-              <dl class="file-metadata"><div><dt>Status</dt><dd>Withdrawn</dd></div><div><dt>Support</dt><dd>None</dd></div><div><dt>Installer</dt><dd>Not offered</dd></div></dl>
-            </article>
+        <section class="section" aria-labelledby="explore-heading">
+          <div class="section-heading"><span class="section-index">02</span><div><p class="kicker">Explore Arqivexa</p><h2 id="explore-heading">Detailed guides for search, setup, and verification.</h2></div></div>
+          <div class="steps-grid">
+            <article class="step-card"><h3><a href="install.html">Install Arqivexa</a></h3><p>Requirements, ProjFS setup, installer notes, and first-open guidance for Windows 11.</p></article>
+            <article class="step-card"><h3><a href="security.html">Security and verification</a></h3><p>Verify the installer checksum, understand signing, updates, diagnostics, and current safety boundaries.</p></article>
+            <article class="step-card"><h3><a href="faq.html">Arqivexa FAQ</a></h3><p>Answers about editing compressed archives, extraction, encryption, supported systems, and backups.</p></article>
+            <article class="step-card"><h3><a href="cfs-file-format.html">The .cfs file format</a></h3><p>Learn what the retained <code>.cfs</code> extension means and how Arqivexa stores compressed file data.</p></article>
+            <article class="step-card"><h3><a href="what-is-arqivexa.html">What is Arqivexa?</a></h3><p>A concise product overview of the Explorer-first editable archive workflow.</p></article>
+            <article class="step-card"><h3><a href="download.html">Download Arqivexa</a></h3><p>Get the current supported 0.5.0 Stable installer and verification links.</p></article>
           </div>
         </section>
 
@@ -154,7 +171,7 @@
               <code class="hash-value">b89a650b96e3dfe981a28b2ff13888cbfef30ec8873f2af77955a1ead98fb46a</code>
               <div class="command-block"><span>PowerShell</span><code>Get-FileHash .\CFS-0.5.0-Stable-Setup.exe -Algorithm SHA256</code></div>
             </div>
-            <div class="update-panel"><span class="shield-mark" aria-hidden="true">✓</span><h3>Consent-first updates</h3><p>Arqivexa checks a public HTTPS manifest, verifies downloads, and asks before requesting administrator approval. It never performs a silent update.</p></div>
+            <div class="update-panel"><span class="shield-mark" aria-hidden="true">✓</span><h3>Consent-first updates</h3><p>Arqivexa checks a public HTTPS manifest, verifies downloads, and asks before requesting administrator approval. It never performs a silent update.</p><p><a class="text-link" href="security.html">Security details →</a></p></div>
           </div>
         </section>
 
@@ -166,7 +183,7 @@
 
       <footer>
         <div class="footer-brand"><span class="brand-mark small" aria-hidden="true">A</span><div><strong>Arqivexa 0.5.0 Stable</strong><p>Explorer-first compressed archive software for Windows.</p></div></div>
-        <div class="footer-links"><a href="what-is-arqivexa.html">What is Arqivexa?</a><a href="https://github.com/Mystrowin/Arqivexa">Project repository</a><a href="https://github.com/Mystrowin/Arqivexa/releases/tag/v0.5.0">Release notes</a><a href="https://github.com/Mystrowin/Arqivexa/issues">Issue tracker</a></div>
+        <div class="footer-links"><a href="what-is-arqivexa.html">Overview</a><a href="how-arqivexa-works.html">How it works</a><a href="install.html">Install</a><a href="security.html">Security</a><a href="faq.html">FAQ</a><a href="cfs-file-format.html">.cfs format</a><a href="download.html">Download</a><a href="https://github.com/Mystrowin/Arqivexa">GitHub</a></div>
         <p class="copyright">Copyright © 2026 Neeraj Pragnya Krishna Vasagiri. All rights reserved.</p>
       </footer>
     </div>

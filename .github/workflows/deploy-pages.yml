@@ -39,3 +39,33 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Check out repository for IndexNow submission
+        uses: actions/checkout@v4
+      - name: Submit current sitemap URLs to IndexNow
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: 223c42cd7fedb5e3796cd851af28d67b
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import xml.etree.ElementTree as ET
+
+          key = os.environ["INDEXNOW_KEY"]
+          root = ET.parse("website/sitemap.xml").getroot()
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [node.text for node in root.findall("sm:url/sm:loc", ns) if node.text]
+          payload = {
+              "host": "arqivexa.mystrowin.com",
+              "key": key,
+              "keyLocation": f"https://arqivexa.mystrowin.com/{key}.txt",
+              "urlList": urls,
+          }
+          with open("/tmp/indexnow.json", "w", encoding="utf-8") as handle:
+              json.dump(payload, handle)
+          print(f"Submitting {len(urls)} Arqivexa URLs to IndexNow")
+          PY
+          curl --fail --silent --show-error \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @/tmp/indexnow.json \
+            https://api.indexnow.org/indexnow

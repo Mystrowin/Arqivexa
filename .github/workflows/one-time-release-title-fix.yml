@@ -15,3 +15,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api --method PATCH "repos/${{ github.repository }}/releases/362107921" -f name="Arqivexa 0.5.0 Stable"
+
+# One-time repair workflow; remove after a successful run.

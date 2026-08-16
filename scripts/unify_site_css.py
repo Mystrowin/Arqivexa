@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# One-time helper: append the unified site visual system.
 css_path = Path("website/styles.css")
 marker = "ARQIVEXA UNIFIED VISUAL SYSTEM — 2026-08-16"
 css = css_path.read_text(encoding="utf-8")

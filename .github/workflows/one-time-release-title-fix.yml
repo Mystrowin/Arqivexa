@@ -1,0 +1,17 @@
+name: One-time Arqivexa release title repair
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rename v0.5.0 release display title
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PATCH "repos/${{ github.repository }}/releases/362107921" -f name="Arqivexa 0.5.0 Stable"

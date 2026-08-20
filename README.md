@@ -33,4 +33,4 @@ This public repository contains the Arqivexa website, user documentation, releas
 
 Implementation source, tests, build tooling, installer definitions, and internal engineering documents are maintained privately. The public repository history was intentionally reduced to approved public material; this does not revoke copies that may have been downloaded before that change.
 
-Copyright © 2026 Neeraj Pragnya Krishna Vasagiri. All rights reserved.
+Copyright © 2026 Mystrowin. All rights reserved.

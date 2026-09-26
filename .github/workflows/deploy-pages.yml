@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Validate robots, sitemap, canonicals, and crawlable links
+        run: python3 .github/scripts/validate_crawl.py website https://arqivexa.mystrowin.com
       - name: Publish update manifest with website
         run: cp update.json website/update.json
       - name: Configure Pages

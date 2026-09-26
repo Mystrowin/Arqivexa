@@ -1730,3 +1730,44 @@ nav a[aria-current="page"] {
     font-size: clamp(2.8rem, 14vw, 4.4rem);
   }
 }
+
+/* Keep mobile navigation available instead of hiding every destination. */
+@media (max-width: 680px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: initial;
+    gap: 0.25rem;
+    padding: 0.45rem 0 0.2rem;
+  }
+
+  .brand-copy {
+    display: grid;
+  }
+
+  .site-header nav {
+    display: flex;
+    grid-column: 1;
+    width: 100%;
+    gap: 0.95rem;
+    overflow-x: auto;
+    padding: 0.5rem 0.1rem 0.45rem;
+    scrollbar-width: none;
+    white-space: nowrap;
+    overscroll-behavior-inline: contain;
+  }
+
+  .site-header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header nav a:not(.nav-download),
+  .site-header nav .nav-download {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .site-header nav .nav-download {
+    padding: 0.48rem 0.72rem;
+  }
+}

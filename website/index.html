@@ -16,16 +16,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#07090d">
-    <title>Arqivexa 0.5.0 Stable — Editable Compressed Archives for Windows</title>
-    <meta name="description" content="Arqivexa creates, opens, edits, and optimizes compressed .cfs archives through File Explorer on Windows 11.">
+    <title>Arqivexa 0.5 Stable — Open and Edit .cfs Archives in Windows</title>
+    <meta name="description" content="Open supported .cfs archives as managed File Explorer workspaces, browse files on demand, and save supported edits. For Windows 11 x64 and local NTFS.">
     <meta name="application-name" content="Arqivexa">
     <meta name="author" content="Neeraj Pragnya Krishna Vasagiri">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://arqivexa.mystrowin.com/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Arqivexa 0.5.0 Stable — Editable Compressed Archives for Windows">
-    <meta property="og:description" content="Open a compressed archive like an editable folder or workspace in Windows 11 File Explorer.">
+    <meta property="og:title" content="Arqivexa 0.5 Stable — Open and Edit .cfs Archives in Windows">
+    <meta property="og:description" content="Open supported .cfs archives as managed File Explorer workspaces, browse files on demand, and save supported edits.">
     <meta property="og:url" content="https://arqivexa.mystrowin.com/">
     <meta property="og:site_name" content="Arqivexa">
     <meta property="og:image" content="https://arqivexa.mystrowin.com/og.png">
@@ -44,6 +44,7 @@
             "url": "https://arqivexa.mystrowin.com/",
             "name": "Arqivexa",
             "alternateName": ["Arqivexa by Mystrowin", "Arqivexa Editable Archive Workspace"],
+            "inLanguage": "en-US",
             "publisher": {"@id": "https://mystrowin.com/#developer"}
           },
           {
@@ -72,6 +73,7 @@
       }
     </script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homepage.css">
     <script src="script.js" defer></script>
   </head>
   <body class="home-page">
@@ -91,18 +93,18 @@
           <div class="hero-copy">
             <div class="eyebrow-row">
               <span class="status-dot" aria-hidden="true"></span><span>Arqivexa 0.5 Stable</span>
-              <span class="eyebrow-divider" aria-hidden="true"></span><span>Windows x64</span>
+              <span class="eyebrow-divider" aria-hidden="true"></span><span>Windows 11 x64</span>
             </div>
             <h1>Arqivexa: Editable compressed archives<span> for Windows.</span></h1>
             <p class="hero-intro">Arqivexa 0.5.0 Stable creates, opens, edits, and optimizes <code>.cfs</code> archives through an Explorer-first workflow on Windows 11.</p>
             <div class="hero-actions">
-              <a class="primary-button" href="download.html"><span>Download 0.5.0 Stable</span><span aria-hidden="true">↓</span></a>
-              <a class="text-link" href="what-is-arqivexa.html">Read what Arqivexa is <span aria-hidden="true">→</span></a>
+              <a class="primary-button" href="download.html"><span>Get Arqivexa 0.5.0</span><span aria-hidden="true">↓</span></a>
+              <a class="text-link" href="install.html">Check requirements first <span aria-hidden="true">→</span></a>
             </div>
             <div class="hero-facts" role="list" aria-label="Release summary"><span role="listitem">48.4 MiB</span><span role="listitem">Windows 11 x64</span><span role="listitem">Explorer-first</span></div>
           </div>
 
-          <div class="archive-visual" aria-hidden="true">
+          <div class="archive-visual" role="img" aria-label="Conceptual workflow diagram, not an in-app screenshot: a compressed .cfs archive supplies files on demand through a File Explorer workspace.">
             <div class="visual-grid"></div>
             <div class="archive-card">
               <div class="archive-label">ARCHIVE.CFS</div>
@@ -111,13 +113,14 @@
             </div>
             <div class="transfer-line"><span></span><span></span><span></span><span></span></div>
             <div class="folder-card"><div class="folder-tab"></div><div class="file-list"><span></span><span></span><span></span></div><div class="folder-caption">EXPLORER</div></div>
-            <div class="visual-caption">ON-DEMAND FILE ACCESS</div>
+            <div class="visual-caption">ARCHIVE → EXPLORER WORKSPACE</div>
+            <div class="visual-disclosure">Conceptual workflow diagram · not an in-app screenshot</div>
           </div>
         </section>
 
         <aside class="beta-warning" aria-label="Arqivexa release notice">
-          <span class="warning-icon" aria-hidden="true">!</span>
-          <div><strong>Arqivexa 0.5.0 Stable is the only supported release.</strong><p>Older releases were withdrawn because of known bugs. Keep independent backups of important archives.</p></div>
+          <span class="warning-icon" aria-hidden="true">i</span>
+          <div><strong>Current release: Arqivexa 0.5.0 Stable.</strong><p>Earlier CFS-branded builds are withdrawn and unsupported. Keep an independent backup before changing important archives.</p></div>
           <a href="https://github.com/Mystrowin/Arqivexa/releases/tag/v0.5.0">Read release notes</a>
         </aside>
 
@@ -134,6 +137,19 @@
             <article class="release-access-card">
               <span class="release-access-version">Versions 0.1–0.4</span><strong>Withdrawn</strong><small>Older versions are unsupported because of known bugs.</small><b>No installer offered</b>
             </article>
+          </div>
+        </section>
+
+        <section class="split-section" id="release-boundary" aria-labelledby="release-boundary-heading">
+          <div class="requirements-panel">
+            <p class="kicker">What 0.5 does</p>
+            <h2 id="release-boundary-heading">Open a .cfs archive as a managed workspace.</h2>
+            <p>Arqivexa 0.5 uses Windows Projected File System to present supported archive contents through the workspace it opens. Applications can work with files through that projected path, subject to normal compatibility limits.</p>
+          </div>
+          <div class="projfs-panel">
+            <span class="feature-label">0.5 RELEASE BOUNDARY</span>
+            <h3>The archive is not a system folder.</h3>
+            <p>The <code>.cfs</code> file is still an archive. Arqivexa 0.5 does not map it over <code>C:\Program Files</code> or another existing directory, provide pre-login access, or replace the Windows file system. Writable archive support targets Windows 11 x64 and local NTFS.</p>
           </div>
         </section>
 
@@ -188,7 +204,7 @@
 
       <footer>
         <div class="footer-brand"><span class="brand-mark small" aria-hidden="true">A</span><div><strong>Arqivexa 0.5.0 Stable</strong><p>Explorer-first compressed archive software for Windows.</p></div></div>
-        <div class="footer-links"><a href="./">Home</a><a href="what-is-arqivexa.html">Overview</a><a href="guides.html">Guides</a><a href="how-arqivexa-works.html">How it works</a><a href="install.html">Install</a><a href="security.html">Security</a><a href="faq.html">FAQ</a><a href="cfs-file-format.html">.cfs format</a><a href="download.html">Download</a><a href="https://github.com/Mystrowin/Arqivexa">GitHub</a></div>
+        <div class="footer-links"><a href="./">Home</a><a href="what-is-arqivexa.html">Overview</a><a href="guides.html">Guides</a><a href="how-arqivexa-works.html">How it works</a><a href="install.html">Install</a><a href="security.html">Security</a><a href="faq.html">FAQ</a><a href="cfs-file-format.html">.cfs format</a><a href="download.html">Download</a><a href="https://mystrowin.com/">Built by Mystrowin</a><a href="https://github.com/Mystrowin/Arqivexa">GitHub</a></div>
         <p class="copyright">Copyright © 2026 Neeraj Pragnya Krishna Vasagiri. All rights reserved.</p>
       </footer>
     </div>

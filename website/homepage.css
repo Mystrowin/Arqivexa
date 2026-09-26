@@ -1,0 +1,18 @@
+/* Homepage-only disclosure for the conceptual workflow illustration. */
+.visual-disclosure {
+  position: absolute;
+  left: 1.4rem;
+  bottom: 1.2rem;
+  max-width: 55%;
+  color: #8297b0;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .visual-disclosure {
+    bottom: 2.5rem;
+    max-width: 50%;
+    font-size: 0.62rem;
+  }
+}

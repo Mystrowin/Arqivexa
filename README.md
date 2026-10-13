@@ -4,6 +4,7 @@
 
 [Project website](https://arqivexa.mystrowin.com/) ·
 [Download the current release](https://arqivexa.mystrowin.com/#download) ·
+[Previous releases, including 0.5.0](https://github.com/Mystrowin/Arqivexa/releases) ·
 [Report a problem](https://github.com/Mystrowin/Arqivexa/issues)
 
 > **Rebrand notice:** The 0.6.0 maintenance build was produced under the CFS name before the public product rename. Its installer filename, signed binary names, and `.cfs` archive extension retain CFS for compatibility and release integrity.

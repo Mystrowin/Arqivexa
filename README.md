@@ -1,4 +1,4 @@
-# Arqivexa 0.5.0 Stable
+# Arqivexa 0.6.0 Stable
 
 **Arqivexa** creates, opens, edits, and extracts compressed `.cfs` archives through an Explorer-first Windows workflow.
 
@@ -6,7 +6,7 @@
 [Download the current release](https://arqivexa.mystrowin.com/#download) ·
 [Report a problem](https://github.com/Mystrowin/Arqivexa/issues)
 
-> **Rebrand notice:** CFS is now named **Arqivexa**. The current 0.5.0 installer filename, some signed build artifacts, and the `.cfs` archive extension retain the previous CFS name for compatibility and release integrity.
+> **Rebrand notice:** The 0.6.0 maintenance build was produced under the CFS name before the public product rename. Its installer filename, signed binary names, and `.cfs` archive extension retain CFS for compatibility and release integrity.
 
 > Keep an independent backup of important or irreplaceable files. Arqivexa's retained previous version protects one transaction boundary; it is not a substitute for a separate backup.
 
@@ -22,8 +22,8 @@
 - [Data-safety guidance](docs/DATA-SAFETY.md)
 - [Privacy and diagnostics policy](docs/PRIVACY-DIAGNOSTICS.md)
 - [Known limitations](docs/KNOWN-LIMITATIONS.md)
-- [0.5.0 Stable release notes](docs/RELEASE-NOTES-0.5.0-STABLE.md)
-- [0.5.0 Stable acceptance report](docs/ACCEPTANCE-REPORT-0.5.0-STABLE.md)
+- [0.6.0 Stable release notes](docs/RELEASE-NOTES-0.6.0-STABLE.md)
+- [0.6.0 Stable verification report](docs/ACCEPTANCE-REPORT-0.6.0-STABLE.md)
 - [Bug-report template](docs/BUG-REPORT-TEMPLATE.md)
 - [Security policy](SECURITY.md)
 

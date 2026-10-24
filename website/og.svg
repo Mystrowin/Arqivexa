@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Arqivexa — Open .cfs Archives in Explorer</title>
+<desc id="desc">Arqivexa 0.6.0 Stable opens supported .cfs archives as managed Windows File Explorer workspaces.</desc>
+<defs>
+  <radialGradient id="glow" cx="78%" cy="16%" r="65%"><stop offset="0" stop-color="#154c88" stop-opacity=".3"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#c3d3e6"/></linearGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#58a6ff" stroke-opacity=".07"/></pattern>
+  <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#174d82"/><stop offset=".5" stop-color="#58a6ff"/><stop offset="1" stop-color="#174d82"/></linearGradient>
+</defs>
+<rect width="1200" height="630" fill="#07090d"/>
+<rect width="1200" height="630" fill="url(#glow)"/>
+<path d="M0 530H1200" stroke="#273244"/>
+<g transform="translate(64 54)">
+  <rect width="46" height="46" rx="12" fill="#111722" stroke="#335177"/>
+  <text x="23" y="31" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#edf4ff">A</text>
+  <text x="60" y="19" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2.4" fill="#edf4ff">ARQIVEXA</text>
+  <text x="60" y="38" font-family="monospace" font-size="9" letter-spacing="1.4" fill="#9aabc1">WINDOWS ARCHIVE WORKSPACE</text>
+</g>
+<g transform="translate(64 176)">
+  <path d="M0 0h24" stroke="#58a6ff"/>
+  <text x="36" y="4" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#bed0e7">ARQIVEXA 0.6.0 STABLE · WINDOWS 11 x64</text>
+  <text x="0" y="91" font-family="Arial,sans-serif" font-size="58" font-weight="600" letter-spacing="-2.2" fill="#edf4ff">Your archive,</text>
+  <text x="0" y="157" font-family="Arial,sans-serif" font-size="58" font-weight="600" letter-spacing="-2.2" fill="url(#silver)">open in Explorer.</text>
+  <text x="0" y="216" font-family="Arial,sans-serif" font-size="18" fill="#9aabc1">Browse files on demand. Save supported edits</text>
+  <text x="0" y="244" font-family="Arial,sans-serif" font-size="18" fill="#9aabc1">back into your compressed archive.</text>
+  <rect x="0" y="286" width="137" height="32" rx="16" fill="#111722" stroke="#335177"/>
+  <text x="68" y="306" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="1" fill="#bed0e7">EXPLORER-FIRST</text>
+  <rect x="149" y="286" width="124" height="32" rx="16" fill="#111722" stroke="#335177"/>
+  <text x="211" y="306" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="1" fill="#bed0e7">ON-DEMAND</text>
+</g>
+<g transform="translate(670 116)">
+  <rect width="465" height="365" fill="#0c1119" stroke="#273244"/>
+  <rect width="465" height="365" fill="url(#grid)"/>
+  <text x="26" y="31" font-family="monospace" font-size="9" letter-spacing="1.6" fill="#9aabc1">ARCHIVE WORKSPACE / 01</text>
+  <g transform="translate(37 91)">
+    <rect width="127" height="174" rx="4" fill="#0c1119" stroke="#335177"/>
+    <text x="14" y="25" font-family="monospace" font-size="9" letter-spacing="1" fill="#bed0e7">ARCHIVE.CFS</text>
+    <path d="M0 38h127" stroke="#273244"/>
+    <rect x="14" y="59" width="92" height="6" rx="3" fill="#58a6ff"/>
+    <rect x="14" y="78" width="73" height="6" rx="3" fill="#174d82"/>
+    <rect x="14" y="97" width="86" height="6" rx="3" fill="#75d7ff"/>
+    <rect x="14" y="116" width="56" height="6" rx="3" fill="#174d82"/>
+    <text x="14" y="153" font-family="monospace" font-size="9" fill="#edf4ff">LZMA2</text>
+  </g>
+  <path d="M165 178h58" stroke="url(#wire)" stroke-width="2"/><circle cx="181" cy="178" r="4" fill="#bed0e7"/><circle cx="207" cy="178" r="4" fill="#58a6ff"/>
+  <g transform="translate(224 144)">
+    <rect width="79" height="68" rx="4" fill="#0b1627" stroke="#58a6ff" stroke-opacity=".7"/>
+    <text x="39" y="27" text-anchor="middle" font-family="monospace" font-size="8" fill="#58a6ff">WINDOWS</text>
+    <text x="39" y="45" text-anchor="middle" font-family="monospace" font-size="11" fill="#edf4ff">ProjFS</text>
+  </g>
+  <path d="M303 178h42" stroke="url(#wire)" stroke-width="2"/><circle cx="316" cy="178" r="4" fill="#bed0e7"/><circle cx="335" cy="178" r="4" fill="#58a6ff"/>
+  <g transform="translate(350 123)">
+    <path d="M5 14h47l11 12h55v123H5z" fill="#111722" stroke="#58a6ff" stroke-opacity=".75"/>
+    <path d="M5 38h113" stroke="#335177"/>
+    <text x="16" y="31" font-family="monospace" font-size="8" fill="#bed0e7">EXPLORER</text>
+    <rect x="17" y="56" width="84" height="7" rx="3.5" fill="#174d82"/>
+    <rect x="17" y="75" width="68" height="7" rx="3.5" fill="#174d82" opacity=".8"/>
+    <rect x="17" y="94" width="78" height="7" rx="3.5" fill="#174d82" opacity=".65"/>
+  </g>
+  <text x="26" y="330" font-family="monospace" font-size="8" letter-spacing="1.2" fill="#9aabc1">CONCEPTUAL WORKFLOW · NOT AN IN-APP SCREENSHOT</text>
+</g>
+</svg>

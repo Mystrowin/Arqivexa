@@ -17,7 +17,7 @@ code{padding:.1em .38em;border:1px solid rgba(47,129,247,.18);border-radius:5px;
 .site-header{position:sticky;top:0;z-index:30;border-bottom:1px solid rgba(39,50,68,.86);background:rgba(7,9,13,.9);backdrop-filter:blur(18px)}
 .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:inline-flex;align-items:center;gap:12px;flex:0 0 auto}
-.brand-mark{display:grid;width:40px;height:40px;place-items:center;border:1px solid rgba(88,166,255,.4);border-radius:12px;color:var(--text);background:linear-gradient(145deg,rgba(47,129,247,.2),rgba(7,9,13,.9));box-shadow:0 0 26px rgba(31,111,235,.12);font:700 17px/1 var(--display)}
+.brand-mark{display:grid;width:40px;height:40px;place-items:center;position:relative;border:1px solid rgba(255,255,255,.48);border-radius:12px;color:transparent;background:linear-gradient(145deg,#e5f2ff 0%,#58a6ff 52%,#cbe5ff 100%);box-shadow:0 0 0 1px rgba(0,0,0,.72),0 0 26px rgba(31,111,235,.2);font-size:0;line-height:0}.brand-mark::before{content:"";position:absolute;inset:21%;background:#071525;clip-path:polygon(50% 0,100% 24%,79% 100%,50% 77%,21% 100%,0 24%)}
 .brand-mark.small{width:34px;height:34px;border-radius:10px;font-size:15px}.brand-copy{display:grid;gap:1px;line-height:1.2}
 .brand-copy strong{font:700 13px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase}.brand-copy small{color:var(--muted);font:400 9px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid rgba(39,50,68,.9);border-radius:999px;background:rgba(12,17,25,.55)}

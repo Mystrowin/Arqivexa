@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Arqivexa">
-  <rect width="64" height="64" rx="14" fill="#111827"/>
-  <path d="M32 12 51 52h-9l-4.4-10H26.2L22 52h-9L32 12Zm0 13.2L29.2 34h5.7L32 25.2Z" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="Arqivexa">
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5f2ff"/>
+      <stop offset=".52" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#cbe5ff"/>
+    </linearGradient>
+  </defs>
+  <rect x=".5" y=".5" width="35" height="35" rx="11" fill="#07090d"/>
+  <rect x="1.5" y="1.5" width="33" height="33" rx="10" fill="url(#blue)" stroke="#fff" stroke-opacity=".48"/>
+  <path d="M18 8 28 12.8 23.8 28 18 23.4 12.2 28 8 12.8Z" fill="#071525"/>
 </svg>
